@@ -10,19 +10,25 @@
 
 ##  check out project from the above repository
 ##  load all maven dependencies
-##  run the command > mvn clean install
+##  run the command > mvn clean install > package
 ##  run the spring boot app "SbappApplication.java"
 
 ##  ** GET SINGLE REQUEST ID **
 ##  open your browser and try the rest api url :  http://localhost:8080/next-tracking-number/
 
-
 ##  ** GET MULTIPLE REQUEST ID ** THIS WILL GENERATE NEXT 100 UNIQUE REQUEST ID'S **
 ##  open your browser and try the rest api url :  http://localhost:8080/next-tracking-number/multiple-request-ids
+
+## After the request got served, a .txt file with unique request id's will be generated in your local
+## directory along with the browser response.
+## sample file format :: REQ_ID_FILE_19_7_1724078307772.txt
 
 
 
 ##  ** APPROACH **
+
+## For now I am not validating any of the request params that are mentioned, 
+## but I am using the request params as property values in my Entity(TrackingRequest) to return the response.
 
 ##  Created TrackingRequest.java for holding all the request param values.
 
